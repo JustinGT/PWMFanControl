@@ -9,9 +9,9 @@ import time                    # Calling time to allow delays to be used
 import subprocess              # Calling subprocess to get the CPU temperature
 
 IO.setwarnings(False)          # Do not show any GPIO warnings
-IO.setmode (IO.BCM)            # BCM pin numbers - PIN8 as ‘GPIO14’
-IO.setup(14,IO.OUT)            # Initialize GPIO14 as our fan output pin
-fan = IO.PWM(14,100)           # Set GPIO14 as a PWM output, with 100Hz frequency (this should match your fans specified PWM frequency)
+IO.setmode (IO.BCM)            # use BCM pin numbers - rather than the actual pinout
+IO.setup(12,IO.OUT)            # Initialize GPIO12 as our fan output pin
+fan = IO.PWM(12,100)           # Set GPIO12 as a PWM output, with 100Hz frequency (this should match your fans specified PWM frequency)
 fan.start(0)                   # Generate a PWM signal with a 0% duty cycle (fan off)
 
 minTemp = 25                   # Temperature and speed range variables, edit these to adjust max and min temperatures and speeds
