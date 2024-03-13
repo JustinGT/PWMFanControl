@@ -40,4 +40,5 @@ while 1:                                    # Execute loop forever
         temp = maxTemp
     temp = int(renormalize(temp, [minTemp, maxTemp], [minSpeed, maxSpeed]))
     fan.ChangeDutyCycle(temp)               # Set fan duty based on temperature, from minSpeed to maxSpeed
+    #print("The current PI temperature is: ", temp, " degrees Celsius.")
     time.sleep(5)                           # Sleep for 5 seconds
